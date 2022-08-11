@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <canvas id="myCanvas" width="300" height ="300">
+        tu navegador no soporta canvas
+    </canvas>
+    <script type =" text/javascript">
+        var cv = document.getElementById('myCanvas');
+        var ctx = cv.getContext('2d');
+
+        ctx.fillStyle="rgb(200,0,0)";
+        ctx.fillRect(10,10,55,50);
+
+        ctx.fillStyle="rgba(0,0,200,0.5)";
+        ctx.fillRect(50,50,55,50);
+
+        ctx.fillStyle="rgb(150,20,150)";
+        ctx.fillRect(90,90,55,50);
+
+        ctx.moveTo(0,0);
+        ctx.lineTo(250,250);
+        ctx.stroke();
+
+        ctx.moveTo(150,150);
+        ctx.lineTo(200,250);
+        ctx.lineTo(150,300);
+        ctx.lineTo(150,150);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(250,100,30,0,2*Math.PI);
+        ctx.fill();
+        
+        ctx.font="40 px Arial";
+        ctx.fillText("Jesus Alonso Geraldo Hernandez",150,50);
+        ctx,strokeText();
+          
+    </script>
+    <p>Jesus Alonso Geraldo Hernandez</p>
+</body>
+</html>
