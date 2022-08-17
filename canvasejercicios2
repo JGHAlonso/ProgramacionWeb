@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="300" height ="300">
+        tu navegador no soporta canvas
+    </canvas>
+    
+    <script type =" text/javascript">
+    
+    
+        var cv = document.getElementById('myCanvas');
+        var ctx = cv.getContext('2d');
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "pink");
+        grd.addColorStop(1, "purple");
+        
+        ctx.fillStyle = grd;
+        ctx.fillRect(10, 10, 150, 80);
+      
+        var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+        grd.addColorStop(0, "blue");
+        grd.addColorStop(1, "yellow");
+
+      
+        ctx.fillStyle = grd;
+        ctx.fillRect(30, 30, 150, 100);
+
+    </script>
+    <p>Jesus Alonso Geraldo Hernandez</p>
+</body>
+</html>
