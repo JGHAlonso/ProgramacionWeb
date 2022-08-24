@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Paisaje</title>
+</head>
+<body>
+<canvas  id="myCanvas" width="800" height="500" ></canvas>
+
+<script>
+    
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+ctx.fillStyle="#99D9EA";
+ctx.fillRect(0,0,800,500);
+ctx.moveTo(275,150);
+        ctx.lineTo(150,300);
+        ctx.lineTo(400,300);
+        ctx.lineTo(275,150);
+        
+        ctx.strokeStyle = '#ff0000';
+        ctx.fillStyle = '#FF7F27';
+      
+       ctx.fill();
+        ctx.stroke();
+
+ctx.moveTo(150,500);
+        ctx.lineTo(150,300);
+        ctx.lineTo(400,300);
+        ctx.lineTo(400,500);
+        ctx.lineTo(150,500);
+        
+      
+       ctx.fill();
+        ctx.stroke();
+
+
+ctx.beginPath();
+       ctx.arc(800, 0, 100, 0, 2 * Math.PI);
+       ctx.strokeStyle = 'yellow';
+       ctx.fillStyle = 'yellow';
+      
+       ctx.fill();
+       ctx.stroke();
+       ctx.fillStyle="rgb(200,0,0)";
+ctx.fillRect(250,400,55,100);
+   
+ctx.fillStyle="rgb(200,0,0)";
+ctx.fillRect(170,350,55,50);
+
+ctx.fillStyle="green";
+ctx.fillRect(400,490,500,20);
+ctx.fillStyle="green";
+ctx.fillRect(0,490,500,20);
+
+
+ctx.beginPath();
+       ctx.arc(575, 425, 50, 0, 2 * Math.PI);
+       ctx.strokeStyle = '#B5E61D';
+       ctx.fillStyle = '#B5E61D';
+      
+       ctx.fill();
+       ctx.stroke();
+       ctx.fillStyle="rgb(200,0,0)";
+ctx.fillStyle="#B97A57";
+ctx.fillRect(550,450,50,40);
+</script>
+    
+</body>
+</html>
