@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avatar</title>
+</head>
+<body>
+<canvas  id="mycanvas" width="800" height="800" ></canvas>
+
+<script>
+    
+    var cv= null;
+    var ctx=null;
+    var player1=null;
+    var super_y=240,super_x=240;
+    var score=0;
+    var direction = 'right';
+function start (){
+       cv = document.getElementById('mycanvas');
+       ctx=cv.getContext('2d');
+       player1=new  Cuadrado(super_x,super_y,40,40,'red');
+
+       player1=new Cuadrado(genereteRandomInteger(500),genereteRandomInteger(500),40,40,'yellow');
+       paint();
+
+}
+
+function paint(){
+    window.requestAnimationFrame(paint);
+    ctx.fillStyle='pink';
+    ctx.fillRect(0,0,500,500);
+    ctx.fillStyle='black';
+    player1.c="black";
+    player1.dibujar(ctx);
+    player2.dibujar(ctx);
+
+
+} 
+
+function Cuadrado(x,y,w,h,c){
+    this.x=x;
+    this.y=y;
+    this.w=w;
+    this.h=h;
+    this.c=c;
+    
+    this.se_tocan =function(target){
+        if(this.x<target.x+target.w &&
+        this.x+this.w>target.x&&
+        this.y<target.y+target.h &&
+        this.y + this.h>target.y)
+        {
+            return true:
+        }
+
+    };
+
+    this.dibujar = function(ctx){
+        ctx.fillStyle=this.c;
+        ctx.fillRect(this.x,this.y,this.w,this.h);
+        ctx.strokeRect(this.x,this.y,this.w,this.h);
+    }
+    document.addListener('keydown',function(e));
+}
+if (e.which ==83 || e.wich == 38){
+    direction ='up';
+}
+if (e.which ==83 || e.wich == 40){
+    direction ='down';
+}
+if (e.which ==65 || e.wich == 37){
+    direction ='left';
+}
+if (e.which ==68 || e.wich == 39){
+    direction ='right';
+}
+
+function update (){
+     if(direction == 'right'){
+        player.x+=10;
+        if (player1.x>500){
+            player1.x=0;
+        }
+     }
+     if(direction == 'left'){
+        player.x-=10;
+        if (player1.x<500){
+            player1.x=0;
+        }
+     }
+     (direction == 'down'){
+        player.y+=10;
+        if (player1.y>500){
+            player1.y=0;
+        }
+     }
+     if(direction == 'up'){
+        player.y+=10;
+        if (player1.y>500){
+            player1.y=0;
+        }
+     }
+     if (player1.se_toca)
+}
+
+
+
+</script>
+
+</body>
+</html>
+</body>
+</html>
