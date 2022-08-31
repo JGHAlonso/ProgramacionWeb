@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="contenedor">
+    <form >
+        <fieldset>
+            <legend>
+                <input type="text" v-model="name" name="name">
+                <input type="text" v-model="lastname" name="name">
+                <button @click ="saludar">
+                    saludar
+                    
+                </button>
+            </legend>
+        </fieldset>
+    </form>
+    <form >
+        <fieldset>
+            <legend>
+                <input type="text" v-model="numOne" name="name">
+                <input type="text" v-model="numTwo" name="name">
+                
+                <button type="button" @click ="sumar">
+                    sumar
+                    
+                </button>
+                <h1 >{{result}}</h1>
+            </legend>
+        </fieldset>
+    </form>
+   
+</div>
+
+<script src="https://unpkg.com/vue@3"></script>
+    <script type="text/javascript">
+        const {createApp}= Vue
+        const app = createApp({
+            
+            data(){
+                
+                return{
+                    name:'Alonso',lastname:'Geraldo',
+                    result:0,numOne:0,numTwo:0
+                }
+                
+            },
+            methods:{
+                saludar(){
+                    alert("hola:"+this.name+" "+this.lastname)
+                },
+                sumar(){
+                    this.result=parseInt(this.numOne)+parseInt(this.numTwo)
+                }
+            }
+        }).mount('#contenedor')
+        
+    </script>
+    
+</body>
+</html>
